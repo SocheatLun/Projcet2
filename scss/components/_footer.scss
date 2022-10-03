@@ -1,0 +1,19 @@
+@import "../mixins/variables";
+
+.footer-low-left{
+    display: flex;
+    align-items: center;
+}
+.footer-low{
+    @include varflex(space-between,center);
+}
+.centect{
+    @include varflex(space-evenly,center);
+    padding: 20px;
+}
+@media only screen and (max-width: 360px){
+    .centect{
+        @include varflex(space-evenly,flex-start);
+        flex-direction: column; 
+    }
+}

@@ -1,0 +1,28 @@
+@import "../mixins/variables";
+
+.text{
+    background-color: darkseagreen;
+    @include images-low(100%,50px);
+    @include varflex(space-evenly,center);
+}
+.text-long{
+    display: flex;
+    flex-direction: column;
+}
+@media only screen and (max-width: 360px){
+    .text{
+        @include varflex(center,center);
+        // flex-direction: column;
+        gap: 5px;
+        
+        margin-top: 20px;
+        margin-left: 5px;
+        // width: 50%;
+    }
+    select{
+        height: 3vh;
+        width: 80%;
+    }
+    
+   
+}

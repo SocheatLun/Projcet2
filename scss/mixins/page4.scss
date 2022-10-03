@@ -1,0 +1,108 @@
+@import "variables";
+@import "../components/image.scss";
+@import "../components/body.scss";
+@import "../components/btn.scss";
+@import "../components/footer.scss";
+@import "../components/nav.scss";
+@import "../components/box.scss";
+
+main{
+    background-color: $textcolor;
+    @include varflex(center,center);
+    flex-direction: column;
+    @include images-low(50%,90%);
+    border-radius: 10px;
+    gap: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+.contect{
+    @include varflex(center,center);
+    flex-direction: column;
+    width: 100%;
+    
+}
+.profile-img {
+    margin-top: 10px;
+}
+span[type="text"]{
+    font-size: larger;
+}
+.all-items{
+    @include varflex(center,center);
+    flex-direction: column;
+    gap: 20px;
+    @include images-low(100%,100%);
+}
+.items-top{
+    @include varflex(space-between,center);
+    flex-direction: column;
+    gap: 10px;
+    width: 80%;
+}
+.items1{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.items1 input{
+    justify-content: center;
+    width: 45%;
+    height: 30px;
+    
+}
+.items-bottom{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+
+}
+.items-bottom input{
+    justify-content: center;
+    width: 80%;
+    @include images-low(80%,30px);
+}
+input{
+    border:1px solid black
+}
+.items8{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.items8 input{
+    width: 100%;
+}
+.continue{
+    display: flex;
+    justify-content: center;
+    width: 40%;
+   margin-bottom: 10px;
+}
+@media only screen and (max-width: 800px){
+    main{
+        @include images-low(60%,50%);
+    }
+    .items-bottom input{
+        justify-content: center;
+        @include images-low(80%,30px)
+    }
+    .items-bottom{
+        gap: 10px;
+        margin-left: 30px;
+    }
+}
+@media only screen and (max-width: 360px){
+    main{
+        @include images-low(90%,110%);
+    }
+    .items-bottom{
+        flex-direction: column;
+        width: 100%;
+        margin-left: 50px;
+    }
+    .items-bottom input{
+        @include images-low(80%,30px);
+    }
+    
+}
+

@@ -1,0 +1,52 @@
+@import "../mixins/variables";
+
+.search{
+    @include images-low(100%,50vh);
+    background-image: url(https://ayandambanga.co.za/wp-content/uploads/2018/02/CV.jpeg);
+    background-size: cover;
+    background-position: center ;
+    margin-bottom: 20px;
+    @include varflex(center, flex-end);
+    
+}
+.search-bar{
+    @include images-low(100%,15vh);
+    margin-bottom: 40px;
+    @include varflex(center,center);
+}
+.search-text{
+    @include images-low(70%,7vh);
+}
+.search-icon{
+    font-size: 47px;
+    background-color: #fff;
+   
+}
+.search-bar button{
+    height: 50px;
+    border-radius: none;
+}
+@media only screen and (max-width: 800px){
+    .search{
+        @include images-low(100%,30vh);
+    }
+    .search-text{
+        @include images-low(70%,4vh);
+    }
+}
+@media only screen and (max-width: 360px){
+    .search-bar{
+        @include images-low(100%,13vh);
+        margin-bottom: 10px;
+    }
+    .search-text{
+        @include images-low(50%,5vh);
+    }
+    .search-icon{
+        font-size: 42px;
+    }
+    .search-bar button{
+        height: 44px;
+        
+    }
+}

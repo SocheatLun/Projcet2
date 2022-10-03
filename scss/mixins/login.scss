@@ -1,0 +1,38 @@
+@import "variables";
+@import "../components/btn.scss";
+@import "../components/from.scss";
+
+body{
+    @include body(100vh,$maincolor);
+    @include varflex(flex-start, center);
+    gap: 20px;
+    
+}
+main{
+    flex-direction: column;
+    @include varflex(center,center);
+    @include images-low(40%,60%);
+    color: rgb(0, 0, 0);
+    border-radius: 5px;
+    
+}
+
+@media only screen and (max-width: 800px){
+    body{
+        @include varflex(center, center);
+        gap: 20px;
+        
+    }
+    main{
+        background-color: none;
+        @include images-low(70%,50%);
+    }
+    
+}
+@media only screen and (max-width: 360px){
+    main{
+        background-color: none;
+        @include images-low(80%,50%);
+    }
+}
+

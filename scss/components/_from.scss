@@ -1,0 +1,71 @@
+.pic{
+    @include images-low(30%,100%);
+    background-image: url(https://www.indonesie.campusfrance.org/sites/pays/files/indonesie/medias/images/2020-07/vignette-job-bis.jpg);
+    background-size: cover;
+    background-position: center;
+    margin-right: 200px;
+}
+form{
+    @include varflex(center,center);
+    flex-direction: column;
+    background-color: $textcolor;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 5px;
+}
+.for{
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+}
+a{
+    color: blue;
+}
+.title{
+    @include varflex(center,center);
+    font-size: 25px;
+    color: rgb(0, 21, 255);
+}
+.content{
+    display: flex;
+    margin-top: 10px;
+    width: 80%;
+}
+.name{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+}
+.name input{
+    width: 45%;
+}
+.low{
+    display: flex;
+    width: 100%;
+}
+.submit-content{
+    width: 100%;
+    @include varflex(center,center)
+}
+.submit-content button{
+    margin-top: 10px;
+    margin-left: 15px;
+    background-color: blue;
+    width: 80%;
+}
+ input{
+    border: 1px solid black;
+    height: 30px;
+}
+@media only screen and (max-width: 800px){
+    .pic{
+        display: none;
+       
+    }
+    form{
+        @include images-low(100%,90%);
+    }
+}
+
+    

@@ -1,0 +1,34 @@
+aside{
+    background-color:ghostwhite;
+    @include images-low(60%,30%);
+    // align-self: center;
+    border-radius: 5px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+aside:hover,
+aside:focus {
+    transform: scale(1.1);
+    transition: .5s;
+}
+.aside-group{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.aside-button{
+    margin: 12px;
+}
+.aside-button button{
+    padding: 10px;
+    margin:5px;
+    width: 50%;
+}
+.aside-img img{
+    margin-top: 50px;
+    @include images-low(100px,100px)
+}
+.aside-text ul{
+    margin-top: 50px;
+    line-height: 1.7;
+}
+

@@ -1,0 +1,10 @@
+@import "../mixins/variables";
+
+.box{
+    display: flex;
+    flex-direction: column;
+}
+.box-low{
+    display: flex;
+    flex-direction: column;
+}

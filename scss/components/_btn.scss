@@ -1,0 +1,37 @@
+@import "../mixins/variables";
+button{
+    border: none;
+    margin-right: 15px;
+    @include images-low(80px,40px);
+    background-color: blue;
+    color: #fff;
+    border-radius: 5px;
+}
+button:hover{
+    @include images-low(90px, 45px);
+    cursor: pointer; 
+}
+button:hover,
+button:focus {
+    transform: scale(1.1);
+    transition: .5s;
+}
+a{
+    text-decoration: none;
+    color: $textcolor;
+}
+button a{
+    color: $textcolor;
+}
+@media only screen and (max-width: 360px){
+    button{
+        @include images-low(60px,30px);
+        margin-right: 5px;
+    }
+    button:hover{
+        @include images-low(61px, 31px);
+    }
+    a{
+        font-size: 10px;
+    }
+}

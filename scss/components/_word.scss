@@ -1,0 +1,31 @@
+@import "../mixins/variables";
+
+.group-word{
+    margin-left: 30px;
+    line-height: 1;
+}
+.word ul{
+   display: flex;
+   gap: 30px;
+   margin-left: 20px;
+} 
+.word li{
+    font-size:large;
+}
+.text h3{
+    margin: 30px;
+}
+.paragraph ul{
+    margin: 30px;
+}
+.paragraph li{
+    margin: 20px;
+    font-size: large;
+}
+.input{
+    display: flex;
+    margin: 30px 40px  0px  70px;
+}
+.input input{
+    width: 40%;
+}

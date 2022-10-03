@@ -1,0 +1,76 @@
+@import "variables";
+@import "../components/btn.scss";
+@import "../components/nav.scss";
+@import "../components/card.scss";
+@import "../components/box.scss";
+@import "../components/footer.scss";
+@import "../components/word.scss";
+@import "../components/image.scss";
+@import "../components/aside.scss";
+
+body{
+    gap: 20px;
+    flex-direction: column;
+    justify-content: space-between;
+    @include body(none,$maincolor);
+    @include varflex(center,center);
+    
+}
+main{
+    background-color: $textcolor;
+    width: 100px;
+    margin-bottom: 50px;
+    @include images-low(60%,45%);
+    border-radius: 5px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    
+}
+main:hover,
+main:focus {
+    transform: scale(1.06);
+    transition: .5s;
+}
+
+.paragraph li,.word li{
+    font-size: 12px;
+}
+li{
+    font-size: 12px;
+}
+
+.realmain{
+    height: 50%;
+    display: flex;
+    gap: 40px;
+    justify-content: flex-end;
+    
+}
+.more{
+    @include images-low(73%,30px);
+    background-color: $maincolor2;
+    text-align: center;
+    align-items: center;
+    color: $textcolor;
+    padding-top:15px;
+}
+
+
+@media only screen and (max-width: 360px){
+    .realmain{
+        @include varflex(center, center);
+        gap: 5px;
+        flex-direction: column;
+        
+        
+    }
+    main{
+       
+        @include images-low(85%,none);
+    }
+    aside{
+        @include images-low(85%,none)
+    }
+}
+
+
+

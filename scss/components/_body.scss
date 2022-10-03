@@ -1,0 +1,18 @@
+// body{
+//     // @include body(100vh,none);
+//     margin: 0;
+//     padding: 0;
+//     height: 100vh;
+//     font-family:sans-serif;
+//     gap: 20px;
+//     background-color: $maincolor;
+    
+// }
+body{
+    gap: 20px;
+    height: 100vh;
+    flex-direction: column;
+    @include body(none,$maincolor);
+    @include varflex(space-between,center);
+    
+}

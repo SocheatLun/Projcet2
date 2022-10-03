@@ -1,0 +1,140 @@
+@import "../mixins/variables";
+
+.list-jobs {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    @include grid(repeat(4, 200px), repeat(3, 130px));
+    justify-content: center;
+    color: #fff;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+
+.list-company {
+    flex-direction: column;
+    @include varflex(flex-end, center);
+    // background-color: $maincolor2;
+}
+
+.card {
+    display: flex;
+    background-color: $cardcolor;
+    line-height: 0;
+    border-radius: 5px;
+}
+
+.card:hover,
+.card:focus {
+    transform: scale(1.1);
+    transition: .5s;
+}
+
+
+.card-left {
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    line-height: 1;
+}
+
+.card-title {
+    line-height: 0.5;
+}
+
+.card-left {
+    margin-left: 10px;
+}
+
+.card-text {
+    display: flex;
+    flex-direction: column;
+    height: 100px;
+    line-height: 1.5;
+    font-size: 12px;
+}
+
+.card-profile {
+    font-size: 14px;
+    flex-direction: column;
+    line-height: 1.5;
+    @include varflex(center, center);
+    width: 50%;
+
+    flex: 1;
+    padding: 0.5rem;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.5s ease-out;
+}
+
+.card-profile:hover,
+.card-profile:focus {
+    transform: scale(1.1);
+    transition: .5s;
+}
+
+.coulmn1,
+.coulmn3,
+.coulmn5 {
+    grid-column: 1/3;
+}
+
+.coulmn2,
+.coulmn4,
+.coulmn6 {
+    grid-column: 3/5;
+}
+
+.card-profile img {
+    @include images-low(70px, 70px);
+}
+
+@media only screen and (max-width: 800px) {
+    .list-jobs {
+        width: 90%;
+    }
+
+    .card {
+        width: 80%;
+        margin-left: 20px;
+    }
+    .list-jobs{
+        @include grid(repeat(4, 180px), repeat(3, 130px));
+    }
+
+    .list-company {
+        margin-left: 50px;
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    .list-jobs {
+        width: 90%;
+        @include grid(repeat(4, 70px), repeat(3, 130px));
+    }
+
+    .coulmn1,
+    .coulmn3,
+    .coulmn5 {
+        grid-column: 1/5;
+    }
+
+    .coulmn2,
+    .coulmn4,
+    .coulmn6 {
+        grid-column: 1/5;
+    }
+
+    .card{
+        width: 90%;
+
+    }
+    .list-company{
+        width: 150px;
+        margin-right: 10px;
+        font-size: 12px;
+        height: 10vh;
+    }
+}
